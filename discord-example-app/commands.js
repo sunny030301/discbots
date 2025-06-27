@@ -61,8 +61,10 @@ const JOIN = {
 }
 
 const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND, JOIN];
+InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
 
-app.use(express.json());
+
+/*app.use(express.json());
 
 // Load SoundCloud client ID from .env
 const clientId = process.env.SOUNDCLOUD_CLIENT_ID;
@@ -168,9 +170,7 @@ async function createCommand() {
   }
 }
 
-InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
-
 app.listen(3000, () => {
   console.log('Listening on port 3000');
   createCommand();
-});
+});*/
